@@ -1,0 +1,217 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+@import "node_modules/font-awesome/scss/font-awesome.scss";
+
+html, body{
+  height: 100%;
+}
+
+#app {
+  position: relative;
+  height: auto;
+  min-height: 100% !important;
+}
+
+.navbar {
+  &-laravel{
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  }
+  &-citivote{
+    background-color: #002d71;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  }
+}
+
+.bg-blur {
+  background-image: url(/images/bg_blur.png) ;
+	background-position: center center;
+	background-repeat:  no-repeat;
+	background-attachment: fixed;
+	background-size:  cover;
+	background-color: #999;
+}
+
+.bg-login {
+  background-image: url(/images/bg_clear.png) ;
+	background-position: center center;
+	background-repeat:  no-repeat;
+	background-attachment: fixed;
+	background-size:  cover;
+	background-color: #999;
+
+  .left-top {
+    position: absolute;
+    top: 15%;
+  }
+
+  .left-bottom {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .login-box {
+    margin-top: 25%;
+    background: #e6e8e7;
+  }
+
+  .has-danger {
+    input {
+      border-color: #d9534f !important;
+    }
+  }
+
+  input[type="text"] {
+    height: 40px;
+    border: 1px black solid;
+    background: transparent;
+  }
+}
+
+.blue-panel {
+  background: rgba(0, 45, 113, 0.7);
+}
+
+.card {
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+
+  &-header {
+    background: #002d71;
+    color: white;
+    font-weight: bold;
+  }
+}
+
+.vote-category-box {
+  background: #e7e2e8;
+}
+
+.candidate-box {
+  button {
+    border: none;
+    outline:none;
+    font-weight: bold;
+
+    &.active {
+      background: #c7007d !important;
+    }
+    &:hover{
+      background: #c7007d;
+    }
+    &:active{
+      outline:none;
+    }
+    &:focus{
+      outline:none;
+    }
+  }
+
+  h6 {
+    min-height: 85px;
+  }
+}
+
+.btn-purple {
+  border: none;
+  outline:none;
+  font-weight: bold;
+  background: #c7007d !important;
+}
+
+.text-purple {
+  color: #c7007e !important;
+}
+.text-blue {
+  color: #1c437e !important;
+}
+
+.overlay{
+  top: 0;
+  min-height: 100%;
+  position: absolute;
+  background-color: rgba(107, 141, 178, 0.5);
+}
+
+.modal-box {
+  position: fixed;
+  background: #e6e8e7;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .blue-line {
+    top: 0;
+    left: 0;
+    height: 130px;
+    position: absolute;
+    background-color: #31548a;
+    width: 100%;
+    z-index: -1;
+  }
+}
+
+.progress{
+  background: #048be5;
+  &-bar{
+    background: #02bdf2;
+  }
+}
+
+// media screen
+@media only screen and (max-width: 375px) {
+  .bg-login {
+    #app {
+      height: auto !important;
+    }
+
+    .left-top {
+      padding: 1rem !important;
+      position: inherit;
+      text-align: center;
+
+      h1, h6 {
+        display: none;
+      }
+    }
+
+    .left-bottom {
+      position: inherit;
+      padding: 1rem !important;
+      text-align: center;
+    }
+
+    .login-box {
+      margin-top: 0;
+      padding: 1.5rem !important;
+    }
+  }
+
+  .navbar-toggler {
+    display: none;
+  }
+
+  #logout {
+    position: absolute;
+    right: 0;
+
+    i {
+        font-size: 2em;
+    }
+  }
+
+  .navbar-brand {
+    padding-top: 0;
+    img {
+      width: 60%
+    }
+  }
+}
+// end media screen
