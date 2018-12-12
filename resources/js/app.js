@@ -45,7 +45,10 @@ const app = new Vue({
     },
     methods: {
       onSubmit: function (e) {
-        if($('.candidate:enabled').length < 1){
+        // console.log($('.passed[value="1"]').length,"value1");
+        // console.log($('.passed').length, "all");
+        // console.log($('.passed[value="1"]').length == $('.passed').length, "compare");
+        if($('.passed[value="1"]').length != $('.passed').length){
           this.overlay = this.modal.warning = true
           this.modal.done = false
           // kasi message error candidate

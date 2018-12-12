@@ -14082,7 +14082,10 @@ var app = new Vue({
   },
   methods: {
     onSubmit: function onSubmit(e) {
-      if ($('.candidate:enabled').length < 1) {
+      // console.log($('.passed[value="1"]').length,"value1");
+      // console.log($('.passed').length, "all");
+      // console.log($('.passed[value="1"]').length == $('.passed').length, "compare");
+      if ($('.passed[value="1"]').length != $('.passed').length) {
         this.overlay = this.modal.warning = true;
         this.modal.done = false;
         // kasi message error candidate
@@ -47728,11 +47731,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['category', 'candidates'],
   data: function data() {
     return {
+      passed: 0,
       votes: [],
       warning: ""
     };
@@ -47744,11 +47749,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         this.votes = this.votes.filter(function (item) {
           return item !== event;
         });
+        this.passed = 0;
       } else {
         if (this.votes.length >= this.category.max) {
           this.warning = 'You can only choose ' + this.category.max + ' candidate(s)';
         } else {
           this.votes.push(event);
+          if (this.votes.length >= this.category.max) {
+            this.passed = 1;
+          }
         }
       }
     }
@@ -47796,6 +47805,12 @@ var render = function() {
     _c("input", {
       attrs: { type: "hidden", name: _vm.inputName },
       domProps: { value: _vm.category.id }
+    }),
+    _vm._v(" "),
+    _c("input", {
+      staticClass: "passed",
+      attrs: { type: "hidden", name: "passed" },
+      domProps: { value: _vm.passed }
     }),
     _vm._v(" "),
     _c(
