@@ -43,6 +43,7 @@ class VoteController extends Controller
         Vote::create(['user_id' => Auth::id(), 'candidate_id' => $val, 'vote_category_id' => $cat_id]);
       }
     }
+    Auth::logout();
     return response()->json(['success' => true]);
   }
 }

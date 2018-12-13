@@ -30,6 +30,8 @@
                               <form action="{{route('download_result')}}" method="get">
                                 <button type="submit" name="button" class="btn btn-primary">Download Vote Result</button>
                               </form>
+                              <br><br>
+                              <a href="{{route('result')}}" class="btn btn-success">View Result</a>
                             </div>
                           </div>
                         </div>

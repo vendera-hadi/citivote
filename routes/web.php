@@ -24,7 +24,6 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/', 'VoteController@index')->name('vote');
     Route::post('/', 'VoteController@create')->name('create_vote');
   });
-  Route::get('/result', 'VoteController@result')->name('result');
 });
 
 Route::prefix('admin')->group(function () {
@@ -33,5 +32,6 @@ Route::prefix('admin')->group(function () {
     Route::get('/', 'HomeController@index')->name('dashboard');
     Route::get('/download', 'HomeController@download')->name('download_result');
     Route::post('/import', 'HomeController@import')->name('import_member');
+    Route::get('/result', 'VoteController@result')->name('result');
   });
 });

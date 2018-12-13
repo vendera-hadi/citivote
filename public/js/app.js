@@ -14099,7 +14099,7 @@ var app = new Vue({
           vm.overlay = vm.modal.done = true;
           vm.modal.warning = false;
           setTimeout(function () {
-            window.location.href = "/result";
+            window.location.href = "/";
           }, 3000);
         }, function (response) {
           // warning modal
