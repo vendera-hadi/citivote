@@ -10,7 +10,7 @@
         @csrf
         <input type="hidden" name="user_id" value="{{$user_id}}">
         @foreach($categories as $category)
-        <vote-category-box :category='{!! $category !!}' :candidates='{!! $candidates !!}'></vote-category-box>
+        <vote-category-box :category='{{ $category }}' :candidates='{!! $candidates !!}'></vote-category-box>
         @endforeach
 
         <center><button class="btn btn-primary btn-purple" name="submit">SUBMIT</button></center>

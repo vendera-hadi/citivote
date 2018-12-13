@@ -57,6 +57,16 @@
 
                           <div class="row py-3">
                             <div class="col-sm-12">
+                              <div class="pull-right py-3">
+                                <a class="btn btn-danger text-white" @click="resetMember">Reset All Members</a>
+                                <a class="btn btn-danger text-white" @click="resetVote">Reset All Votes</a>
+                                <form id="reset-vote" class="d-none" action="{{route('reset_vote')}}" method="post">
+                                  @csrf
+                                </form>
+                                <form id="reset-member" class="d-none" action="{{route('reset_member')}}" method="post">
+                                  @csrf
+                                </form>
+                              </div>
                               <table class="table">
                                 <thead class="thead-dark">
                                   <tr>

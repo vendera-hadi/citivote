@@ -33,5 +33,7 @@ Route::prefix('admin')->group(function () {
     Route::get('/download', 'HomeController@download')->name('download_result');
     Route::post('/import', 'HomeController@import')->name('import_member');
     Route::get('/result', 'VoteController@result')->name('result');
+    Route::post('/reset-vote', 'HomeController@reset_vote')->name('reset_vote');
+    Route::post('/reset-member', 'HomeController@reset_member')->name('reset_member');
   });
 });

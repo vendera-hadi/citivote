@@ -64,7 +64,7 @@ const app = new Vue({
                 vm.modal.warning = false
                 setTimeout(function(){
                   window.location.href = "/"
-                },3000);
+                },8000);
             }, function(response) {
                 // warning modal
                 vm.overlay = vm.modal.warning = true
@@ -73,9 +73,50 @@ const app = new Vue({
             });
         }
       },
+      resetVote: function(){
+        if(confirm('are you sure want to delete all votes ?')){
+          var form = $('#reset-vote');
+          axios.post(form.attr('action'), form.serialize())
+            .then(function(response) {
+                // success
+                console.log(response.data, "Hasil return data");
+                window.location.href = "/admin"
+            }, function(response) {
+                // warning modal
+                alert(response)
+                // kasi message error
+            });
+        }
+      },
+      resetMember: function(){
+        if(confirm('are you sure want to delete all members ?')){
+          var form = $('#reset-member');
+          axios.post(form.attr('action'), form.serialize())
+            .then(function(response) {
+                // success
+                console.log(response.data, "Hasil return data");
+                window.location.href = "/admin"
+            }, function(response) {
+                // warning modal
+                alert(response)
+                // kasi message error
+            });
+        }
+      },
+      closeOverlayManual: function(e){
+        if(this.modal.done){
+          window.location.href = "/"
+        }else{
+          this.overlay = this.modal.warning = this.modal.done = false
+        }
+      },
       closeOverlay: function(e){
         if(e.originalTarget.className == 'overlay w-100'){
-          this.overlay = this.modal.warning = this.modal.done = false
+          if(this.modal.done){
+            window.location.href = "/"
+          }else{
+            this.overlay = this.modal.warning = this.modal.done = false
+          }
         }
       }
     }

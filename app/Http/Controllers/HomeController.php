@@ -45,4 +45,18 @@ class HomeController extends Controller
         Excel::import(new UserImport($this->faker), $file);
         return redirect('admin')->with('success', 'Import success!');
     }
+
+    public function reset_vote(Request $request)
+    {
+        Vote::truncate();
+        $request->session()->flash('success', 'Vote reset successfully');
+        return response()->json(['success' => true]);
+    }
+
+    public function reset_member(Request $request)
+    {
+        User::where('role_id',2)->delete();
+        $request->session()->flash('success', 'Member reset successfully');
+        return response()->json(['success' => true]);
+    }
 }
