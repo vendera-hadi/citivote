@@ -194,6 +194,16 @@ html, body{
     }
   }
 
+  .candidate-box {
+    h5 {
+      margin-top: 45px;
+    }
+
+    h6 {
+      min-height: auto;
+    }
+  }
+
   .navbar-toggler {
     display: none;
   }

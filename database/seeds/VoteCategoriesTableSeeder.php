@@ -13,8 +13,8 @@ class VoteCategoriesTableSeeder extends Seeder
     public function run()
     {
       VoteCategory::insert([
-          ['name' => "Most Effective Ambassador's Campaign", 'max' => 1, 'description' => "Ambassador communicated clearly the key messages of the attribute showed behaviors accordingly and made you feel want to change."],
-          ['name' => 'Most Favorite Ambassador', 'max' => 2, 'description' => "Ambassador&#x27;s campaign activities delivered in creative, fun and memorable ways."]
+          ['name' => "The Most Effective Campaign", 'max' => 1, 'description' => "Ambassador communicated clearly the key messages of the attribute showed behaviors accordingly and made you feel want to change."],
+          ['name' => 'The Best Value<br>Forward Compatible Role Model', 'max' => 2, 'description' => "The Ambassador who demonstrates his/her strong belief of Forward Compatible Attribute, demonstrated through his/her behaviors during the interaction and continuously to influence others to behave as per behaviors outlined by the guidelines."]
       ]);
     }
 }

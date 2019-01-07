@@ -1,7 +1,7 @@
 <template>
   <div class="vote-category-box rounded py-4 mb-5">
-    <h1 class="text-center font-weight-bold">{{category.name}}</h1>
-    <p class="text-center">{{category.description}}</p>
+    <h1 v-html="category.name" class="text-center font-weight-bold"></h1>
+    <p class="text-center px-2">{{category.description}}</p>
     <h4 class="text-center font-weight-bold mb-3">{{shortInfo}}</h4>
     <p class="text-danger text-center">{{warning}}</p>
     <input type="hidden" v-bind:name="inputName" v-bind:value="category.id">

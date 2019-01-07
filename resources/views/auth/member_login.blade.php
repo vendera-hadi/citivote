@@ -10,7 +10,7 @@ Member Login
     <div class="col-md-4 col-sm-12 blue-panel">
         <div class="left-top p-5">
           <h2 class="text-white font-weight-bold text-capitalize">Forward Compatible</h2>
-          <img src="{{ asset('images/logo_big.png') }}" class="w-75 image-fluid" alt=""><br>
+          <img src="{{ asset('images/logo_big.png') }}" class="my-2 w-75 image-fluid" alt=""><br>
           <div class="left-text pt-4 text-white">
             <h3 class="font-weight-bold text-capitalize">A Mindset Change</h3>
             <h6>"...forward compatible people are compelled to keep challenging themselves and be forever learning and growing..."</h6>
@@ -18,7 +18,7 @@ Member Login
         </div>
 
         <div class="left-bottom p-5">
-          <img src="{{ asset('images/50_year.png') }}" alt="">
+          <!-- <img src="{{ asset('images/50_year.png') }}" alt=""> -->
         </div>
     </div>
     <!-- right -->

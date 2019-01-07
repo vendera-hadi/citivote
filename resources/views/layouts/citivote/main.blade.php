@@ -10,7 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }} @yield('title', 'Page Title')</title>
 
     <!-- Icon -->
-    <link rel="shortcut icon" sizes="114x114" href="{{{ asset('images/favicon.ico') }}}">
+    <link rel="shortcut icon" sizes="114x114" href="{{{ asset('images/logo.png') }}}">
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -27,7 +27,7 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-citivote">
             <div class="container">
                 <a class="navbar-brand" href="#">
-                    <img src="{{{ asset('images/logo.png') }}}" alt="">
+                    <img src="{{{ asset('images/logo.png') }}}" class="image-fluid" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -41,7 +41,7 @@
 
                     <!-- Right Side Of Navbar -->
                     <div class="navbar-nav ml-auto">
-                        <img src="{{ asset('images/50_year.png') }}" alt="">
+                        <!-- <img src="{{ asset('images/50_year.png') }}" alt=""> -->
                     </div>
                 </div>
             </div>

@@ -26,7 +26,7 @@ class VoteExport implements FromCollection, WithHeadings, ShouldAutoSize
     {
         $result = Vote::join('users', 'users.id', '=', 'votes.candidate_id')
               ->join('vote_categories', 'vote_categories.id', '=', 'votes.vote_category_id')
-              ->select('vote_categories.name as category', 'users.nickname as name', \DB::raw('count(votes.id) as total'))
+              ->select(\DB::raw("REPLACE(vote_categories.name,'<br>', ' ') as category"), 'users.nickname as name', \DB::raw('count(votes.id) as total'))
               ->groupBy('vote_categories.name','users.nickname')->get();
         return $result;
     }

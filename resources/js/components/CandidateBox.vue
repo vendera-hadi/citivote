@@ -4,7 +4,7 @@
     <img v-bind:src="imageUrl" v-bind:title="candidate.name" data-placement="right" data-toggle="tooltip" class="img-fluid circle py-3" alt="">
     <h6>{{candidate.description}}</h6>
     <input type="hidden" class="candidate" v-bind:name="inputName" v-bind:value="candidate.id" v-bind:disabled="!isActive">
-    <button type="button" class="btn btn-primary" v-bind:class="{ active: isActive }" v-on:click="toggleVote(candidate.id)">VOTE</button>
+    <button type="button" class="btn btn-primary my-2" v-bind:class="{ active: isActive }" v-on:click="toggleVote(candidate.id)">VOTE</button>
   </div>
 </template>
 
