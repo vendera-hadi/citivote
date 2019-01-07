@@ -1,5 +1,9 @@
 @extends('layouts.citivote.main')
 
+@section('title')
+Result Page
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
