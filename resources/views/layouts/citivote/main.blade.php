@@ -27,6 +27,7 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-citivote">
             <div class="container">
                 <a class="navbar-brand" href="#">
+                    <small class="text-white">Forward Compatible</small><br>
                     <img src="{{{ asset('images/logo.png') }}}" class="image-fluid" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">

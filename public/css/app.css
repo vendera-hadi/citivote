@@ -13682,7 +13682,7 @@ body {
   background: #02bdf2;
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 414px) {
   .bg-login #app {
     height: auto !important;
   }
@@ -13715,6 +13715,13 @@ body {
 
   .candidate-box h6 {
     min-height: auto;
+  }
+
+  .candidate-box button:active,
+  .candidate-box button:hover {
+    color: #fff;
+    background-color: #2176bd;
+    outline: none;
   }
 
   .navbar-toggler {
