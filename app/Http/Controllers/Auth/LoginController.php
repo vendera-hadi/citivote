@@ -43,7 +43,7 @@ class LoginController extends Controller
 
     public function login_member()
     {
-        return view('auth.member_login');
+        return view('myna.auth.member_login');
     }
 
     public function authenticate_member(Request $request)
