@@ -22,12 +22,15 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body class="bg-blur">
+<body class="bg-login" id="myna">
     <div id="app">
         <nav class="navbar nav-fill w-100 p-0">
-            <div class="container-full">
+            <div class="container-full w-100">
+                <div class="border-nav-top w-100"></div>
                 <a href="#">
-                    <img src="{{{ asset('images/myna/logo.png') }}}" class="image-fluid" alt="">
+                    <div class="logo-bg1"></div>
+                    <div class="logo-bg2"></div>
+                    <img src="{{{ asset('images/myna/logo.png') }}}" class="image-fluid logo" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>

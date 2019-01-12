@@ -165,6 +165,51 @@ html, body{
   }
 }
 
+#myna {
+  .logo {
+    position: absolute;
+    z-index: 3;
+
+    &-bg1 {
+      position: absolute;
+      z-index: 2;
+      width: 275px;
+      height: 55px;
+      background-color: #008ec8;
+    }
+
+    &-bg2 {
+      width: 400px;
+      height: 20px;
+      position: absolute;
+      background-color: #25a5d9;
+    }
+  }
+
+  .border-nav-top {
+    height: 16px;
+    background-color: #46b6e5;
+    border-left: 20px solid #002a54;
+  }
+
+  .login-box {
+    margin-top: 8% !important;
+  }
+
+  .subtitle-header {
+    width: 50%;
+  }
+
+  &.bg-login {
+    background-image: url(/images/myna/bg-login.png) ;
+  	background-position: center center;
+  	background-repeat:  no-repeat;
+  	background-attachment: fixed;
+  	background-size:  cover;
+  	background-color: #999;
+  }
+}
+
 // media screen
 @media only screen and (max-width: 414px) {
   .bg-login {
@@ -227,6 +272,34 @@ html, body{
     padding-top: 0;
     img {
       width: 60%
+    }
+  }
+
+  #myna {
+    .logo {
+      width: 33%;
+
+      &-bg1 {
+        width: 46%;
+        height: 40px;
+      }
+
+      &-bg2 {
+        width: 60%;
+        height: 12px;
+      }
+    }
+
+    .border-nav-top {
+      height: 8px;
+    }
+
+    .row.main-container {
+      margin-top: 95px;
+    }
+
+    .subtitle-header {
+      width: 100%;
     }
   }
 }
