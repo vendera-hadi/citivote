@@ -16,6 +16,7 @@ bg-upload
         <div class="col-sm-12">
           <h3 class="font-weight-bold">Please Upload Your Photo</h3>
           <div class="upload-box mt-5 mb-4 py-3 rounded">
+            @csrf
             <img v-bind:src="selectedSource" class="addon d-none">
             <croppa v-model="imgUploader" :width="250" :height="250"
                     v-bind:initial-image="initImage"
@@ -115,7 +116,7 @@ bg-upload
           </div>
 
           <div class="mt-5">
-            <button type="button" class="btn btn-purple text-white">PREVIEW</button>
+            <button type="button" class="btn btn-purple text-white" @click="upload">PREVIEW</button>
           </div>
 
         </div>

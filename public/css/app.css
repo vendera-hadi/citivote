@@ -13930,6 +13930,10 @@ body {
   background-image: url(/images/myna/bg-upload.png);
 }
 
+#myna.bg-confirmation {
+  background-image: url(/images/myna/bg-confirmation.png);
+}
+
 #myna .upload-box {
   width: 280px;
   margin: 0 auto;

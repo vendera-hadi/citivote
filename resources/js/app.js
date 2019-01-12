@@ -106,7 +106,33 @@ const app = new Vue({
        applyMetadata () {
          let metadata = JSON.parse(localStorage.getItem('metadata'))
          this.imgUploader.applyMetadata(metadata)
-       }
+       },
+       upload() {
+          if (!this.imgUploader.hasImage()) {
+            alert('no image to upload')
+            return
+          }
+
+          this.imgUploader.generateBlob((blob) => {
+            var fd = new FormData()
+            fd.append('file', blob, 'filename.png')
+            fd.append('_token', $('input[name="_token"]').val())
+            $.ajax({
+              url: '/',
+              data: fd,
+              type: 'POST',
+              processData: false,
+              contentType: false,
+              success: function(data) {
+                if(data.success){
+                  window.location.href = "/confirmation"
+                }else{
+                  alert("Error occured when uploading image")
+                }
+              }
+            })
+          })
+        }
    }
 });
 
