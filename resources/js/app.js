@@ -40,9 +40,74 @@ const app = new Vue({
     el: '#app',
     data: function () {
       return {
-        imgUploader: {}
+        imgUploader: {},
+        selectedSource: null,
+        initImage: null
       }
-    }
+    },
+    methods: {
+       onFileTypeMismatch (file) {
+         alert('Invalid file type. Please choose a jpeg or png file.')
+       },
+       onFileSizeExceed (file) {
+         alert('File size exceeds. Please choose a file smaller than 5 MB.')
+       },
+       onDraw: function (ctx) {
+         // save default state
+         ctx.save()
+         if(this.selectedSource !== null){
+           console.log("eksekusi gambar")
+           // fill with image source, get frame
+           // ctx.globalAlpha = 0.7
+           let img = new Image(250, 250)
+           let self = this
+           img.src = this.selectedSource
+           img.onload = function(){
+             console.log(document.querySelector('.addon'), "ISIAN IMG")
+             ctx.drawImage(document.querySelector('.addon'), 0, 0, 500, 500)
+             // restore img to default
+             ctx.restore()
+             $('.loading-overlay').hide();
+             console.log("Close loading");
+           }
+         }
+       },
+       changeFrameList (e) {
+         console.log(e, "change frame")
+         let target = e.target.value
+         $('.frame-panel .row').addClass('d-none')
+         $('#' + target).removeClass('d-none')
+       },
+       changeFrameImage (e) {
+         $('.loading-overlay').show();
+         console.log("Start loading");
+         if(this.imgUploader.hasImage()){
+           this.selectedSource = e.target.src
+           // reset active frame
+           $(".frame-panel a.active").removeClass('active')
+           // select active frame
+           $(e.target).parent().addClass('active')
+
+           this.initImage = this.imgUploader.img;
+           this.saveMetadata()
+           this.imgUploader.refresh()
+           let ctx = this.imgUploader.getContext()
+           this.onDraw(ctx)
+           this.applyMetadata()
+         }else{
+           alert('Please Upload an Image first')
+           $('.loading-overlay').hide();
+           console.log("Close loading");
+         }
+       },
+       saveMetadata () {
+         localStorage.setItem('metadata', JSON.stringify(this.imgUploader.getMetadata()))
+       },
+       applyMetadata () {
+         let metadata = JSON.parse(localStorage.getItem('metadata'))
+         this.imgUploader.applyMetadata(metadata)
+       }
+   }
 });
 
 // VOTING

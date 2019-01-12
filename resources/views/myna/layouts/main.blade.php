@@ -62,6 +62,10 @@
             @yield('content')
         </main>
         @yield('modal')
+        <div class="loading-overlay" style="display:none">
+          <div class="spinner">
+          </div>
+        </div>
     </div>
 </body>
 </html>
