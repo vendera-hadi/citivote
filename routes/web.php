@@ -21,8 +21,9 @@ Route::group(['middleware' => ['guest']], function () {
 // as member
 Route::group(['middleware' => ['auth']], function () {
   Route::group(['middleware' => ['not_vote']], function () {
-    Route::get('/', 'VoteController@index')->name('vote');
-    Route::post('/', 'VoteController@create')->name('create_vote');
+    // Route::get('/', 'VoteController@index')->name('vote');
+    // Route::post('/', 'VoteController@create')->name('create_vote');
+    Route::get('/', 'MynaController@index')->name('upload_photo');
   });
 });
 

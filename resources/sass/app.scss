@@ -8,6 +8,8 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 @import "node_modules/font-awesome/scss/font-awesome.scss";
+// Vue Croppa
+@import "~vue-croppa/dist/vue-croppa.css";
 
 html, body{
   height: 100%;
@@ -200,13 +202,41 @@ html, body{
     width: 50%;
   }
 
-  &.bg-login {
-    background-image: url(/images/myna/bg-login.png) ;
-  	background-position: center center;
+  .bg-fill {
+    background-position: center center;
   	background-repeat:  no-repeat;
   	background-attachment: fixed;
   	background-size:  cover;
   	background-color: #999;
+  }
+
+  &.bg-login {
+    background-image: url(/images/myna/bg-login.png) ;
+  }
+
+  &.bg-upload {
+    background-image: url(/images/myna/bg-upload.png) ;
+  }
+
+  .upload-box {
+    width: 280px;
+    margin: 0 auto;
+    margin-top: 0px;
+    background-color: white;
+
+    -webkit-box-shadow: -1px 2px 22px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 2px 22px 0px rgba(0,0,0,0.75);
+    box-shadow: -1px 2px 22px 0px rgba(0,0,0,0.75);
+
+    button {
+      width: 250px;
+    }
+  }
+
+  #logout {
+    position: absolute;
+    right: 0;
+    top: 15px;
   }
 }
 

@@ -4,6 +4,10 @@
 Member Login
 @endsection
 
+@section('background')
+bg-login
+@endsection
+
 @section('content')
 <div class="row justify-content-center w-100 h-100 mx-0">
 

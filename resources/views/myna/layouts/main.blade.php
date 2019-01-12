@@ -22,7 +22,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body class="bg-login" id="myna">
+<body class="bg-fill @yield('background')" id="myna">
     <div id="app">
         <nav class="navbar nav-fill w-100 p-0">
             <div class="container-full w-100">
@@ -52,7 +52,7 @@
             <form id="logout" method="post" action="{{route('logout')}}">
               @csrf
               <a onclick="document.getElementById('logout').submit();" class="btn">
-                <i class="fa fa-sign-out fa-3x text-white"></i>
+                <i class="fa fa-sign-out fa-3x text-dark"></i>
               </a>
             </form>
             @endauth
