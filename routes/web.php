@@ -26,6 +26,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/', 'MynaController@index')->name('upload_photo');
     Route::post('/', 'MynaController@upload')->name('post_upload_photo');
     Route::get('confirmation', 'MynaController@confirmation')->name('upload_confirmation');
+    Route::post('confirmation', 'MynaController@store')->name('store_upload');
+    Route::get('thankyou', 'MynaController@thankyou')->name('thankyou');
   });
 });
 

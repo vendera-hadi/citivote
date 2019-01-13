@@ -242,7 +242,7 @@ html, body{
     width: 50%;
   }
 
-  .bg-fill {
+  &.bg-fill {
     background-position: center center;
   	background-repeat:  no-repeat;
   	background-attachment: fixed;
@@ -260,6 +260,14 @@ html, body{
 
   &.bg-confirmation {
     background-image: url(/images/myna/bg-confirmation.png) ;
+  }
+
+  &.bg-reconfirm {
+    background-image: url(/images/myna/bg-reconfirm.png) ;
+  }
+
+  &.bg-done {
+    background-image: url(/images/myna/bg-done.png) ;
   }
 
   .upload-box {
@@ -297,6 +305,15 @@ html, body{
         border: 3px solid #ff8e2e;
       }
     }
+  }
+
+  img.active {
+    border: 3px solid #ff8e2e;
+  }
+
+  .confirmation-panel {
+    width: 300px;
+    margin: 0 auto;
   }
 
   #logout {

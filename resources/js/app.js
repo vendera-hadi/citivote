@@ -132,6 +132,23 @@ const app = new Vue({
               }
             })
           })
+        },
+        choosePhoto(e) {
+          $('.img-fluid.rounded').removeClass('active');
+          $(e.target).addClass('active');
+          let path = e.target.src.split('/storage/')[1];
+          $('input[name="image_path"]').val(path);
+        },
+        submitReconfirm(e) {
+          let image = $('input[name="image_path"]').val();
+          if(image==""){
+            e.preventDefault();
+            alert("Please Choose one of the Image");
+            return false
+          }else{
+            // submit FormData
+            console.log("submit")
+          }
         }
    }
 });

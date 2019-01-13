@@ -48,6 +48,11 @@ class User extends Authenticatable
         return $this->hasMany('App\Models\Vote', 'user_id');
     }
 
+    public function photo()
+    {
+        return $this->hasOne('App\Models\UserPhoto', 'user_id');
+    }
+
     public function role()
     {
        return $this->belongsTo('App\Models\Role');
