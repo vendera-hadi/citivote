@@ -81,24 +81,27 @@ const app = new Vue({
        changeFrameImage (e) {
          $('.loading-overlay').show();
          console.log("Start loading");
-         if(this.imgUploader.hasImage()){
-           this.selectedSource = e.target.src
-           // reset active frame
-           $(".frame-panel a.active").removeClass('active')
-           // select active frame
-           $(e.target).parent().addClass('active')
+         let self = this
+         setTimeout(function(){
+           if(self.imgUploader.hasImage()){
+             self.selectedSource = e.target.src
+             // reset active frame
+             $(".frame-panel a.active").removeClass('active')
+             // select active frame
+             $(e.target).parent().addClass('active')
 
-           this.initImage = this.imgUploader.img;
-           this.saveMetadata()
-           this.imgUploader.refresh()
-           let ctx = this.imgUploader.getContext()
-           this.onDraw(ctx)
-           this.applyMetadata()
-         }else{
-           alert('Please Upload an Image first')
-           $('.loading-overlay').hide();
-           console.log("Close loading");
-         }
+             self.initImage = self.imgUploader.img;
+             self.saveMetadata()
+             self.imgUploader.refresh()
+             let ctx = self.imgUploader.getContext()
+             self.onDraw(ctx)
+             self.applyMetadata()
+           }else{
+             alert('Please Upload an Image first')
+             $('.loading-overlay').hide();
+             console.log("Close loading");
+           }
+         },500);
        },
        saveMetadata () {
          localStorage.setItem('metadata', JSON.stringify(this.imgUploader.getMetadata()))
@@ -107,11 +110,13 @@ const app = new Vue({
          let metadata = JSON.parse(localStorage.getItem('metadata'))
          this.imgUploader.applyMetadata(metadata)
        },
-       upload() {
+       upload(e) {
           if (!this.imgUploader.hasImage()) {
             alert('no image to upload')
             return
           }
+          $(e.target).attr('disabled','disabled');
+          $(e.target).text("Loading ...");
 
           this.imgUploader.generateBlob((blob) => {
             var fd = new FormData()
