@@ -9,7 +9,7 @@ bg-login
 @endsection
 
 @section('content')
-<div class="row justify-content-center w-100 h-100 mx-0">
+<div class="row justify-content-center w-100 h-100 mx-0 login-container">
 
     <!-- right -->
     <div class="col-md-8 col-sm-12">

@@ -62,10 +62,9 @@ class MynaController extends Controller
               Storage::disk('public')->move($image_path, str_replace('_new','', $image_path));
             }
         }else{
-            $user_photo = new UserPhoto;
-            $user_photo->user_id = Auth::id();
-            $user_photo->image_path = $image_path;
-            $user_photo->save();
+            $user->photo = new UserPhoto;
+            $user->image_path = $image_path;
+            $user->save();
         }
         $request->session()->flash('filename', $user->photo->image_path);
         return redirect('thankyou');

@@ -44,10 +44,10 @@ Upload Preview
               </div>
               <div class="mt-5">
                 <div class="row confirmation-panel">
-                  <div class="col-sm-6">
+                  <div class="col-sm-6 mb-3">
                     <button class="btn btn-purple text-white">YES</button>
                   </div>
-                  <div class="col-sm-6">
+                  <div class="col-sm-6 mb-3">
                     <a href="{{ route('upload_photo') }}" class="btn btn-purple text-white">NO</a>
                   </div>
                 </div>
