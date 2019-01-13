@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Vote;
 use App\Models\User;
 use App\Exports\VoteExport;
+use App\Exports\PhotoExport;
 use App\Imports\UserImport;
 use Maatwebsite\Excel\Facades\Excel;
 use Faker\Generator as Faker;
@@ -37,6 +38,11 @@ class HomeController extends Controller
     public function download()
     {
         return Excel::download(new VoteExport, 'vote_result.xlsx');
+    }
+
+    public function download_mna()
+    {
+        return Excel::download(new PhotoExport, 'mynextaspiration_result.xlsx');
     }
 
     public function import(Request $request)

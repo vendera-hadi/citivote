@@ -31,6 +31,7 @@ Route::prefix('admin')->group(function () {
   Route::group(['middleware' => ['auth_admin']], function () {
     Route::get('/', 'HomeController@index')->name('dashboard');
     Route::get('/download', 'HomeController@download')->name('download_result');
+    Route::get('/photo_result', 'HomeController@download_mna')->name('photo_result');
     Route::post('/import', 'HomeController@import')->name('import_member');
     Route::get('/result', 'VoteController@result')->name('result');
     Route::post('/reset-vote', 'HomeController@reset_vote')->name('reset_vote');
