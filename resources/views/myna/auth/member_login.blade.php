@@ -43,7 +43,7 @@ bg-login
           </div>
 
           <div class="col-md-12 my-5">
-            <h3 class="text-white font-weight-bold">“GET A CHANCE TO <span class="text-purple">WIN MOVIE CARD!</span>”</h3>
+            <h3 class="text-dark font-weight-bold">“GET A CHANCE TO <span style="color:#4285f4">WIN MOVIE CARD!</span>”</h3>
           </div>
       </div>
     </div>
