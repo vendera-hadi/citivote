@@ -18,13 +18,13 @@ Upload Preview
           <form id="form-confirm" action="{{route('store_upload')}}" v-on:submit="submitReconfirm" method="post">
             @csrf
             @if($user->photo)
-              <h3 class="font-weight-bold">Yeay! Your Picture is Ready, <br>Please choose which one you prefer?</h3>
+              <h3 class="font-weight-bold">Looks like you've submitted before. <br>Which one do you prefer?</h3>
               <div class="mt-5 mb-4">
                 <input type="hidden" name="image_path" value="">
                 <div class="row">
                   <div class="col-sm-6 mb-5">
                     <img src="{{asset("storage/".$user->photo->image_path)}}?time={{microtime()}}" @click="choosePhoto" width="250" class="img-fluid rounded" alt="">
-                    <h4 class="my-3">Last</h6>
+                    <h4 class="my-3">Previous</h6>
                   </div>
                   <div class="col-sm-6">
                     <img src="{{asset("storage/users/photo/$filename")}}" @click="choosePhoto" width="250" class="img-fluid rounded" alt="">
@@ -37,7 +37,7 @@ Upload Preview
                 <button name="submit" class="btn btn-purple text-white">OK</button>
               </div>
             @else
-              <h3 class="font-weight-bold">Yeay! Your Picture is Ready, <br>is this okay?</h3>
+              <h3 class="font-weight-bold">Your Picture is Ready, <br>Do you want to submit?</h3>
               <div class="mt-5 mb-4">
                 <input type="hidden" name="image_path" value="{{"users/photo/$filename"}}">
                 <img src="{{asset("storage/users/photo/$filename")}}" width="250" class="img-fluid rounded" alt="">

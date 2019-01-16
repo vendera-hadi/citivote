@@ -14,7 +14,7 @@ bg-done
     <div class="col-md-8 col-sm-12 text-center">
       <div class="row main-container">
         <div class="col-sm-12">
-          <h3 class="font-weight-bold">All is set! <br> Thank you for your participation ...</h3>
+          <h3 class="font-weight-bold">You're good to go! <br> Thank you for your participation.</h3>
           <div class="upload-box mt-5 mb-4 py-3 rounded">
             <img src="{{asset("storage/$filename")}}" width="250" class="img-fluid rounded" alt="">
           </div>

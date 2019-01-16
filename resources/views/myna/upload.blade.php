@@ -20,7 +20,7 @@ bg-upload
             <img v-bind:src="selectedSource" class="addon d-none">
             <croppa v-model="imgUploader" :width="250" :height="250"
                     v-bind:initial-image="initImage"
-                    :file-size-limit="6000000"
+                    :file-size-limit="10000000"
                     accept=".jpg,.jpeg,.png"
                     :disable-click-to-choose="true"
                     :prevent-white-space="true"
@@ -37,7 +37,7 @@ bg-upload
             </croppa>
             <button class="btn btn-primary btn-rounded" @click="imgUploader.chooseFile()">CHOOSE PHOTO</button>
           </div>
-          <small class="text-purple">maximum upload size is 5MB *</small>
+          <small class="text-purple">maximum upload size is 10MB *</small>
           <div class="my-5">
             <h3 class="font-weight-bold">Please Choose Category</h3>
             <select class="form-control mt-4" name="category" @change="changeFrameList">
@@ -53,41 +53,32 @@ bg-upload
             <div class="frame-panel rounded py-3">
               <!-- passion -->
               <div class="row" id="passion">
-                <div class="col-sm-4 my-3">
+                <div class="col-sm-6 my-3">
                   <a href="#" @click="changeFrameImage">
                     <img src="{{asset('images/myna/frame-1.png')}}" alt="">
                   </a>
                 </div>
-                <div class="col-sm-4 my-3">
+                <div class="col-sm-6 my-3">
                   <a href="#" @click="changeFrameImage">
                     <img src="{{asset('images/myna/frame-2.png')}}" alt="">
                   </a>
                 </div>
-                <div class="col-sm-4 my-3">
+                <div class="col-sm-6 my-3">
                   <a href="#" @click="changeFrameImage">
                     <img src="{{asset('images/myna/frame-3.png')}}" alt="">
                   </a>
                 </div>
-                <div class="col-sm-4 my-3">
+                <div class="col-sm-6 my-3">
                   <a href="#" @click="changeFrameImage">
-                    <img src="{{asset('images/myna/frame-1.png')}}" alt="">
+                    <img src="{{asset('images/myna/frame-4.png')}}" alt="">
                   </a>
                 </div>
-                <div class="col-sm-4 my-3">
-                  <a href="#" @click="changeFrameImage">
-                    <img src="{{asset('images/myna/frame-2.png')}}" alt="">
-                  </a>
-                </div>
-                <div class="col-sm-4 my-3">
-                  <a href="#" @click="changeFrameImage">
-                    <img src="{{asset('images/myna/frame-3.png')}}" alt="">
-                  </a>
-                </div>
+
               </div>
 
               <!-- drive -->
               <div class="row d-none" id="drive">
-                <div class="col-sm-4 my-3">
+                <div class="col-sm-6 my-3">
                   <a href="#" @click="changeFrameImage">
                     <img src="{{asset('images/myna/frame-1.png')}}" alt="">
                   </a>
@@ -96,7 +87,7 @@ bg-upload
 
               <!-- inspiration -->
               <div class="row d-none" id="inspiration">
-                <div class="col-sm-4 my-3">
+                <div class="col-sm-6 my-3">
                   <a href="#" @click="changeFrameImage">
                     <img src="{{asset('images/myna/frame-2.png')}}" alt="">
                   </a>
@@ -105,7 +96,7 @@ bg-upload
 
               <!-- optimism -->
               <div class="row d-none" id="optimism">
-                <div class="col-sm-4 my-3">
+                <div class="col-sm-6 my-3">
                   <a href="#" @click="changeFrameImage">
                     <img src="{{asset('images/myna/frame-3.png')}}" alt="">
                   </a>

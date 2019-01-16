@@ -16,7 +16,9 @@ bg-login
       <div class="row justify-content-center text-center main-container w-100 mx-0">
           <div class="col-md-12">
               <h1>My Next Aspiration</h1>
-              <p class="text-muted mx-auto subtitle-header">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ... </p>
+              <p class="text-muted mx-auto subtitle-header">
+                “ ... Citi’s mission is to enable growth and progress for client and communities around the world. We empower whose who make progress to embrace the future with confidence. Let’s Welcome whats next ... ”
+              </p>
           </div>
 
           <div class="login-box col-md-6 p-5 text-center rounded">
@@ -28,14 +30,20 @@ bg-login
                 <p class="text-danger">{{session()->get('errors')->first()}}</p>
                 @endif
               </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="agree" required>
+                <label class="form-check-label" for="agree">
+                  <small class="text-purple">I hereby give my consent to Citibank N.A., Indonesia for the use of any materials submitted. Images may not be uploaded on social media accounts.</small>
+                </label>
+              </div>
               <div class="form-group">
-                <button type="submit" class="btn btn-primary w-100" name="button">Login</button>
+                <button type="submit" class="btn btn-primary w-100 mt-3" name="button">Login</button>
               </div>
             </form>
           </div>
 
           <div class="col-md-12 my-5">
-            <h3 class="text-white font-weight-bold">WIN <span class="text-purple">LOREM IPSUM PRIZE</span> FOR THE CHOSEN ONE!</h3>
+            <h3 class="text-white font-weight-bold">“GET A CHANCE TO <span class="text-purple">WIN MOVIE CARD!</span>”</h3>
           </div>
       </div>
     </div>
