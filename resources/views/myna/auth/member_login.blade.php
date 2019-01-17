@@ -17,7 +17,7 @@ bg-login
           <div class="col-md-12">
               <h1>My Next Aspiration</h1>
               <p class="text-muted mx-auto subtitle-header">
-                “ ... Citi’s mission is to enable growth and progress for client and communities around the world. We empower whose who make progress to embrace the future with confidence. Let’s Welcome whats next ... ”
+                “ ... We empower whose who make progress to embrace the future with confidence. Let’s Welcome whats next ... ”
               </p>
           </div>
 
