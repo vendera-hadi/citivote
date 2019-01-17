@@ -17,7 +17,7 @@ bg-login
           <div class="col-md-12">
               <h1>My Next Aspiration</h1>
               <p class="text-muted mx-auto subtitle-header">
-                “ ... We empower whose who make progress to embrace the future with confidence. Let’s Welcome whats next ... ”
+                “ ... We empower those who make progress to embrace the future with confidence. Let’s Welcome whats next ... ”
               </p>
           </div>
 
