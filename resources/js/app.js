@@ -42,7 +42,8 @@ const app = new Vue({
       return {
         imgUploader: {},
         selectedSource: null,
-        initImage: null
+        initImage: null,
+        useFrame: false
       }
     },
     methods: {
@@ -84,6 +85,7 @@ const app = new Vue({
          let self = this
          setTimeout(function(){
            if(self.imgUploader.hasImage()){
+             self.useFrame = true
              self.selectedSource = e.target.src
              // reset active frame
              $(".frame-panel a.active").removeClass('active')
@@ -114,6 +116,10 @@ const app = new Vue({
           if (!this.imgUploader.hasImage()) {
             alert('no image to upload')
             return
+          }
+          if(!this.useFrame){
+            alert("Please Choose one of the Image Frame");
+            return false
           }
           $(e.target).attr('disabled','disabled');
           $(e.target).text("Loading ...");

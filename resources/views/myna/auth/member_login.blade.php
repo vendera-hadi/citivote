@@ -17,7 +17,7 @@ bg-login
           <div class="col-md-12">
               <h1>My Next Aspiration</h1>
               <p class="text-muted mx-auto subtitle-header">
-                “ ... We empower those who make progress to embrace the future with confidence. Let’s Welcome whats next ... ”
+                We empower those who make progress to embrace the future with confidence. Let’s Welcome what’s next
               </p>
           </div>
 
@@ -43,7 +43,7 @@ bg-login
           </div>
 
           <div class="col-md-12 my-5">
-            <h3 class="text-dark font-weight-bold">“GET A CHANCE TO <span style="color:#4285f4">WIN MOVIE CARD!</span>”</h3>
+            <h3 class="text-dark font-weight-bold">GET A CHANCE TO <span style="color:#4285f4">WIN XXI MOVIE CARDS!</span></h3>
           </div>
       </div>
     </div>

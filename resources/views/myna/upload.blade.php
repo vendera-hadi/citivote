@@ -53,24 +53,19 @@ bg-upload
             <div class="frame-panel rounded py-3">
               <!-- passion -->
               <div class="row" id="passion">
-                <div class="col-sm-6 my-3">
+                <div class="col-sm-4 my-3">
                   <a href="#" @click="changeFrameImage">
-                    <img src="{{asset('images/myna/frame-1.png')}}" alt="">
+                    <img src="{{asset('images/myna/passion-1.png')}}" width="173" class="img-fluid" alt="">
                   </a>
                 </div>
-                <div class="col-sm-6 my-3">
+                <div class="col-sm-4 my-3">
                   <a href="#" @click="changeFrameImage">
-                    <img src="{{asset('images/myna/frame-2.png')}}" alt="">
+                    <img src="{{asset('images/myna/passion-2.png')}}" width="173" class="img-fluid" alt="">
                   </a>
                 </div>
-                <div class="col-sm-6 my-3">
+                <div class="col-sm-4 my-3">
                   <a href="#" @click="changeFrameImage">
-                    <img src="{{asset('images/myna/frame-3.png')}}" alt="">
-                  </a>
-                </div>
-                <div class="col-sm-6 my-3">
-                  <a href="#" @click="changeFrameImage">
-                    <img src="{{asset('images/myna/frame-4.png')}}" alt="">
+                    <img src="{{asset('images/myna/passion-3.png')}}" width="173" class="img-fluid" alt="">
                   </a>
                 </div>
 
@@ -78,27 +73,57 @@ bg-upload
 
               <!-- drive -->
               <div class="row d-none" id="drive">
-                <div class="col-sm-6 my-3">
+                <div class="col-sm-4 my-3">
                   <a href="#" @click="changeFrameImage">
-                    <img src="{{asset('images/myna/frame-1.png')}}" alt="">
+                    <img src="{{asset('images/myna/drive-1.png')}}" width="173" class="img-fluid" alt="">
+                  </a>
+                </div>
+                <div class="col-sm-4 my-3">
+                  <a href="#" @click="changeFrameImage">
+                    <img src="{{asset('images/myna/drive-2.png')}}" width="173" class="img-fluid" alt="">
+                  </a>
+                </div>
+                <div class="col-sm-4 my-3">
+                  <a href="#" @click="changeFrameImage">
+                    <img src="{{asset('images/myna/drive-3.png')}}" width="173" class="img-fluid" alt="">
                   </a>
                 </div>
               </div>
 
               <!-- inspiration -->
               <div class="row d-none" id="inspiration">
-                <div class="col-sm-6 my-3">
+                <div class="col-sm-4 my-3">
                   <a href="#" @click="changeFrameImage">
-                    <img src="{{asset('images/myna/frame-2.png')}}" alt="">
+                    <img src="{{asset('images/myna/inspiration-1.png')}}" width="173" class="img-fluid" alt="">
+                  </a>
+                </div>
+                <div class="col-sm-4 my-3">
+                  <a href="#" @click="changeFrameImage">
+                    <img src="{{asset('images/myna/inspiration-2.png')}}" width="173" class="img-fluid" alt="">
+                  </a>
+                </div>
+                <div class="col-sm-4 my-3">
+                  <a href="#" @click="changeFrameImage">
+                    <img src="{{asset('images/myna/inspiration-3.png')}}" width="173" class="img-fluid" alt="">
                   </a>
                 </div>
               </div>
 
               <!-- optimism -->
               <div class="row d-none" id="optimism">
-                <div class="col-sm-6 my-3">
+                <div class="col-sm-4 my-3">
                   <a href="#" @click="changeFrameImage">
-                    <img src="{{asset('images/myna/frame-3.png')}}" alt="">
+                    <img src="{{asset('images/myna/optimism-1.png')}}" width="173" class="img-fluid" alt="">
+                  </a>
+                </div>
+                <div class="col-sm-4 my-3">
+                  <a href="#" @click="changeFrameImage">
+                    <img src="{{asset('images/myna/optimism-2.png')}}" width="173" class="img-fluid" alt="">
+                  </a>
+                </div>
+                <div class="col-sm-4 my-3">
+                  <a href="#" @click="changeFrameImage">
+                    <img src="{{asset('images/myna/optimism-3.png')}}" width="173" class="img-fluid" alt="">
                   </a>
                 </div>
               </div>
