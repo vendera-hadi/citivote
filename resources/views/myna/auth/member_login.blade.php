@@ -18,6 +18,8 @@ bg-login
               <h1>My Next Aspiration</h1>
               <p class="text-muted mx-auto subtitle-header">
                 We empower those who make progress to embrace the future with confidence. Let’s Welcome what’s next
+                <br><br>
+                Take your best picture and show us your aspiration.
               </p>
           </div>
 
